@@ -63,7 +63,8 @@ vorpal
     }
   })
   .action(function (args, callback) {
-    exec
+	  // git checkout <branch>
+		// git push <remote> <branch>
     callback();
   });
 
@@ -76,7 +77,6 @@ vorpal
             type: 'input',
             name: 'base',
             message: 'Enter the base branch from where tag would be cut:',
-            // Others prompt, the base branch + titlte of the ticket
           },
           {
             type: 'input',
