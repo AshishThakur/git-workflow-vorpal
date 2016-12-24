@@ -1,0 +1,24 @@
+{
+  "name": "git-workflow-vorpal",
+  "version": "1.0.0",
+  "description": "Git workflow using vorpal",
+  "dependencies": {
+    "vorpal": "^1.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshishThakur/git-workflow-vorpal.git"
+  },
+  "keywords": [
+    "git"
+  ],
+  "author": "dash2ashish@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AshishThakur/git-workflow-vorpal/issues"
+  },
+  "homepage": "https://github.com/AshishThakur/git-workflow-vorpal#readme"
+}
