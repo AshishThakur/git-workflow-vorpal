@@ -82,7 +82,21 @@ vorpal
             type: 'input',
             name: 'tag',
             message: 'Enter the tag name:',
-          }],
-         function (result) {
+          },
+          {
+            type: 'input',
+            name: 'remote',
+            message: 'Enter the remote repo',
+          }
+        ],
+        function (result) {
+           exec('git checkout ' + result.base, (error, stdout, stderr) => {
+            if (error) {
+              console.error(`exec error: ${error}`);
+              return;
+            }
+            console.log(`stdout: ${stdout}`);
+            console.log(`stderr: ${stderr}`);
+           });
         });
     });
