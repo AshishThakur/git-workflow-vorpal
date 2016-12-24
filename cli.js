@@ -1,4 +1,5 @@
 var vorpal = require('vorpal')();
+var Git = require("nodegit");
 
 vorpal
     .delimiter('git-workflow$')
@@ -27,4 +28,14 @@ vorpal
   .command('feature finish')
 
 vorpal
+  .command('feature checkout')
+
+vorpal
+  .command('feature rebase')
+
+vorpal
   .command('feature publish')
+
+vorpal
+  .command('release tag', 'Release a tag')
+
