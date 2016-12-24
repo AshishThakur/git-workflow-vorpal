@@ -21,14 +21,13 @@ vorpal
             name: 'title',
             message: 'Enter the title of the story',
           }],
-       function (result) {
-        // Create a function to create a new branch: ticket-id-<title>
-        // where ticket-id is the ticket id of your story and <title> is
-        // title of your story lowercase + spaces replaced by '-' and max
-        // 10 chars. Create a function for this
-        // git checkout -b <feature-branch> <base>
-
-      });
+         function (result) {
+          // Create a function to create a new branch: ticket-id-<title>
+          // where ticket-id is the ticket id of your story and <title> is
+          // title of your story lowercase + spaces replaced by '-' and max
+          // 10 chars. Create a function for this
+          // git checkout -b <feature-branch> <base>
+         });
     });
 
 vorpal
@@ -70,3 +69,20 @@ vorpal
 
 vorpal
   .command('release tag', 'Release a tag')
+  .action(function (args, cb) {
+      const self = this;
+      this.prompt([
+          {
+            type: 'input',
+            name: 'base',
+            message: 'Enter the base branch from where tag would be cut:',
+            // Others prompt, the base branch + titlte of the ticket
+          },
+          {
+            type: 'input',
+            name: 'tag',
+            message: 'Enter the tag name:',
+          }],
+         function (result) {
+        });
+    });
