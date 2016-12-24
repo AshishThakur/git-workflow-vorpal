@@ -1,5 +1,4 @@
 var vorpal = require('vorpal')();
-var Git = require("nodegit");
 
 vorpal
     .delimiter('git-workflow$')
@@ -25,16 +24,30 @@ vorpal
     });
 
 vorpal
-  .command('feature finish')
+  // Finish a feature
+  .command('feature finish', 'Finish a feature')
+  .action(function (args, callback) {
+    const self = this;
+
+  });
 
 vorpal
-  .command('feature checkout')
+  .command('feature checkout', 'Checkout to an existing feature branch')
 
 vorpal
   .command('feature rebase')
 
 vorpal
   .command('feature publish')
+  .option('-r, --remote <remote>')
+  .option('-b, --branch <branch>')
+  .action(function (args, callback) {
+    if (typeof args.options.remote === 'undefined' || typeof args.options.branch == 'undefined') {
+      this.log('No options!');
+      callback();
+    }
+    callback();
+  });
 
 vorpal
   .command('release tag', 'Release a tag')
