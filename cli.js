@@ -27,6 +27,7 @@ vorpal
           // title of your story lowercase + spaces replaced by '-' and max
           // 10 chars. Create a function for this
           // git checkout -b <feature-branch> <base>
+          git checkout -b <feature-branch> <base>
          });
     });
 
