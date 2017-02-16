@@ -6,7 +6,7 @@ vorpal
     .show();
 
 vorpal
-    .command('feature start', 'Start working on a new feature')
+    .command('feature start', 'Start working on a new feature!')
     .action(function (args, cb) {
       const self = this;
       this.prompt([
